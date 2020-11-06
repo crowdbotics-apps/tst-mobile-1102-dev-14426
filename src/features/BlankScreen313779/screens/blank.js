@@ -44,8 +44,7 @@ export default class Blank extends React.Component {
       />
       <CheckBox
         title="Radio button"
-        checkedIcon="dot-circle-o"
-        uncheckedIcon="circle-o"
+        containerStyle={styles.CheckBox_7}
         checked={this.state.CheckBox_7}
         onPress={nextChecked => this.setState({ CheckBox_7: nextChecked })}
       />
@@ -87,6 +86,16 @@ const styles = StyleSheet.create({
     borderStyle: "dotted",
     lineHeight: 15
   },
+
   TextInput_5: {},
-  CheckBox_7: {}
+  CheckBox_7: {},
+  View_1: {},
+  CheckBox_3: {
+    width: 200,
+    borderColor: "#eb1919",
+    borderStyle: "dotted",
+    lineHeight: 15
+  },
+  TextInput_5: {},
+  CheckBox_7: { textDecorationLine: "line-through" }
 })
