@@ -23,7 +23,11 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { CheckBox_3: true, TextInput_5: "This is the value." }
+  state = {
+    CheckBox_3: true,
+    TextInput_5: "This is the value.",
+    CheckBox_7: true
+  }
 
   render = () => (
     <View>
@@ -31,12 +35,19 @@ export default class Blank extends React.Component {
         title="Checkbox"
         containerStyle={styles.CheckBox_3}
         checked={this.state.CheckBox_3}
-        onPress={() => this.setState({ CheckBox_3: !this.state.CheckBox_3 })}
+        onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
       />
       <TextInput
         placeholder="Sample text input placeholder"
         value={this.state.TextInput_5}
         onChangeText={nextValue => this.setState({ TextInput_5: nextValue })}
+      />
+      <CheckBox
+        title="Radio button"
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
+        checked={this.state.CheckBox_7}
+        onPress={nextChecked => this.setState({ CheckBox_7: nextChecked })}
       />
     </View>
   )
@@ -59,6 +70,7 @@ const styles = StyleSheet.create({
     borderStyle: "dotted",
     lineHeight: 15
   },
+
   View_1: {},
   CheckBox_3: {
     width: 200,
@@ -66,5 +78,15 @@ const styles = StyleSheet.create({
     borderStyle: "dotted",
     lineHeight: 15
   },
-  TextInput_5: {}
+
+  TextInput_5: {},
+  View_1: {},
+  CheckBox_3: {
+    width: 200,
+    borderColor: "#eb1919",
+    borderStyle: "dotted",
+    lineHeight: 15
+  },
+  TextInput_5: {},
+  CheckBox_7: {}
 })
