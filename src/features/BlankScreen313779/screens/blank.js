@@ -31,7 +31,7 @@ export default class Blank extends React.Component {
         title="Checkbox"
         containerStyle={styles.CheckBox_3}
         checked={this.state.CheckBox_3}
-        onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
+        onPress={() => this.setState({ CheckBox_3: !this.state.CheckBox_3 })}
       />
       <TextInput
         placeholder="Sample text input placeholder"
