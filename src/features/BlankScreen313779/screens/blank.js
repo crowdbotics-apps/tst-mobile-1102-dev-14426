@@ -23,7 +23,7 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { CheckBox_3: true }
+  state = { CheckBox_3: true, TextInput_5: "This is the value." }
 
   render = () => (
     <View>
@@ -32,6 +32,11 @@ export default class Blank extends React.Component {
         containerStyle={styles.CheckBox_3}
         checked={this.state.CheckBox_3}
         onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
+      />
+      <TextInput
+        placeholder="Sample text input placeholder"
+        value={this.state.TextInput_5}
+        onChangeText={nextValue => this.setState({ TextInput_5: nextValue })}
       />
     </View>
   )
@@ -53,5 +58,13 @@ const styles = StyleSheet.create({
     borderColor: "#eb1919",
     borderStyle: "dotted",
     lineHeight: 15
-  }
+  },
+  View_1: {},
+  CheckBox_3: {
+    width: 200,
+    borderColor: "#eb1919",
+    borderStyle: "dotted",
+    lineHeight: 15
+  },
+  TextInput_5: {}
 })
