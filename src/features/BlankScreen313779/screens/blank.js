@@ -45,11 +45,14 @@ export default class Blank extends React.Component {
       />
       <CheckBox
         title="Radio button"
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
         containerStyle={styles.CheckBox_7}
         checked={this.state.CheckBox_7}
         onPress={nextChecked => this.setState({ CheckBox_7: nextChecked })}
       />
       <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         style={styles.Switch_9}
         value={this.state.Switch_9}
         onValueChange={nextChecked => this.setState({ Switch_9: nextChecked })}
@@ -122,6 +125,19 @@ const styles = StyleSheet.create({
     width: 200,
     borderColor: "#eb1919",
     borderStyle: "dotted",
+    lineHeight: 15
+  },
+
+  TextInput_5: {},
+  CheckBox_7: { textDecorationLine: "line-through" },
+  Switch_9: { alignSelf: "flex-start" },
+  Text_11: {},
+  View_1: {},
+  CheckBox_3: {
+    width: 200,
+    borderColor: "#eb1919",
+    borderStyle: "dotted",
+    textTransform: "uppercase",
     lineHeight: 15
   },
   TextInput_5: {},
