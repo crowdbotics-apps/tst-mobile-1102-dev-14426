@@ -24,7 +24,7 @@ class Blank extends React.Component {
 
   render = () => (
     <View style={styles.container}>
-      <Text>Register for an Account</Text>
+      <Text>Register for an Account!!!</Text>
       <TextInput 
         onChangeText={email => this.setState({ email: email })}
         style={{ height: 40, borderColor: "gray", borderWidth: 1 }}/>
